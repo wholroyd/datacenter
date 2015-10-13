@@ -1,0 +1,16 @@
+[Unit]
+Description=Vault is a tool for managing secrets.
+Documentation=http://www.vaultproject.io/
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=vault
+Group=vault
+EnvironmentFile=-/etc/sysconfig/vault
+ExecStart=/usr/bin/vault $CMD_OPTS
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

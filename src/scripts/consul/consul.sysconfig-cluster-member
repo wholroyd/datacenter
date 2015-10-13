@@ -1,0 +1,2 @@
+CMD_OPTS="agent -server -config-dir=/etc/consul -data-dir=/var/lib/consul -join=$GENESIS"
+#GOMAXPROCS=4

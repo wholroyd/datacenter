@@ -1,0 +1,2 @@
+CMD_OPTS="agent -server -config-dir=/etc/nomad -data-dir=/var/lib/nomad -join=$GENESIS"
+#GOMAXPROCS=4

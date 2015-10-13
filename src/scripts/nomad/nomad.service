@@ -1,0 +1,16 @@
+[Unit]
+Description=Nomad is a tool for managing a cluster of machines and running applications on them. Nomad is a distributed, highly available, datacenter-aware scheduler
+Documentation=http://www.nomadproject.io/
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=nomad
+Group=nomad
+EnvironmentFile=-/etc/sysconfig/nomad
+ExecStart=/usr/bin/nomad $CMD_OPTS
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

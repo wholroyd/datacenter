@@ -1,0 +1,3 @@
+# Datacenter
+
+This is a work-in-progress project to test the build out of both EC2 and vSphere instances in a hybrid-cloud configuration using Terraform for the infrastructure, Consul for service discovery and configuration store, Vault for the storage and management of secrets, and Nomad for the execution of jobs and services. The scripts and configuration files will build both the cluster to manage the infrastructure and the worker nodes.

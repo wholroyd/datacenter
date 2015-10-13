@@ -1,0 +1,2 @@
+CMD_OPTS="agent -config-dir=/etc/vault -data-dir=/var/lib/vault"
+#GOMAXPROCS=4
